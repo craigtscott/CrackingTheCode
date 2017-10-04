@@ -4,8 +4,11 @@
 import sys
 
 def oneAway(stringA, stringB):
-    print stringA
-    print stringB
+    dif =abs( len(stringA) - len(stringB))
+    if dif > 1:
+        print "False"
+        return False
+
 
 
 if __name__ == "__main__":
