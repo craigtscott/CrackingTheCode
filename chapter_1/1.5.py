@@ -8,23 +8,23 @@ def oneAway(stringA, stringB):
     if dif > 1:
         print "False"
     
-    if dif = 1:
-        string = "".join(strings)
-        list = [0] * 26
-        oddCount = 0
-        for l in string:
-            index = ord(l.lower())-97
-            if list[index] == 0:
-            list[index] = 1
-            oddCount = oddCount + 1
-        else:
-            list[index] = 0
-            oddCount = oddCount - 1
+    if dif == 1:
+        for string in [stringA, stringB]:
+            list = [0] * 26
+            oddCount = 0
+            for l in string:
+                index = ord(l.lower())-97
+                if list[index] == 0:
+                    list[index] = 1
+                    oddCount = oddCount + 1
+                else:
+                    list[index] = 0
+                    oddCount = oddCount - 1
             
     if oddCount > 1:
         print "False"
         return False
-                                                                                    print "True"
+    print "True"
     return True
 
 
