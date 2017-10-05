@@ -7,7 +7,25 @@ def oneAway(stringA, stringB):
     dif =abs( len(stringA) - len(stringB))
     if dif > 1:
         print "False"
+    
+    if dif = 1:
+        string = "".join(strings)
+        list = [0] * 26
+        oddCount = 0
+        for l in string:
+            index = ord(l.lower())-97
+            if list[index] == 0:
+            list[index] = 1
+            oddCount = oddCount + 1
+        else:
+            list[index] = 0
+            oddCount = oddCount - 1
+            
+    if oddCount > 1:
+        print "False"
         return False
+                                                                                    print "True"
+    return True
 
 
 
