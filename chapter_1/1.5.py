@@ -9,9 +9,10 @@ def oneAway(stringA, stringB):
         print "False"
     
     if dif == 1:
+        firstRun = True
+        oddCount = 0
+        list = [0] * 26
         for string in [stringA, stringB]:
-            list = [0] * 26
-            oddCount = 0
             for l in string:
                 index = ord(l.lower())-97
                 if list[index] == 0:
