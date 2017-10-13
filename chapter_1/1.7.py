@@ -33,3 +33,6 @@ if __name__ == "__main__":
     # protateMatrix([[1,2,3],[4,5,6],[7,8,9]])
     # print "should print False"
     # rotateMatrix([[1,2],[1,2],[1,2]])
+
+""" to run: python 1.7.py [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]] the algorithem is O(n^2) because you have to touch all of n*n elements"""
+
