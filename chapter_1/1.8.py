@@ -14,7 +14,7 @@ def zeroMatrix(matrix):
 
     for index in range(0, len(matrix)):
         for jndex in range(0, len(matrix[0])):
-            if matrix[index][jndex]:
+            if matrix[index][jndex] == 0:
                 row[index] = True
                 col[jndex] = True
     
