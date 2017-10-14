@@ -40,8 +40,10 @@ def zeroCol(matrix, jndex):
         matrix[index][jndex] = 0
     return matrix
 if __name__ == "__main__":
-    # zeroMatrix(sys.argv[1])
-    print "should be [[0,0],[0,3]]"
-    zeroMatrix([[0,1],[2,3]])
-    print "should be [[1,0,1],[0,0,0][1,0,1]]"
-    zeroMatrix([[1,1,1],[1,0,1],[1,1,1]])
+    zeroMatrix(sys.argv[1])
+    #print "should be [[0,0],[0,3]]"
+    #zeroMatrix([[0,1],[2,3]])
+    #print "should be [[1,0,1],[0,0,0][1,0,1]]"
+    #zeroMatrix([[1,1,1],[1,0,1],[1,1,1]])
+
+""" To run $python 1.8.py [matrix] """
