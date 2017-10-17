@@ -1,0 +1,9 @@
+# !usr/bin/src python
+
+"""Remove Dups: write code to remove duplicates from  an unsorted liked list."""
+from LinkedList import LinkedList
+
+def removeDups(linkedList):
+    
+
+
