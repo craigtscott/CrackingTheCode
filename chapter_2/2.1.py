@@ -12,8 +12,11 @@ def removeDups(linkedList):
     current = linkedList.first
     touched = set([current.value])
     while current.next:
+        print seenHash
+        print current.next.value
         if current.next.value in seenHash:
-           linkedList.remove(current.next) 
+            current = current.next
+            linkedList.remove(current) 
         else:
             seenHash[current.next.value] = True
             current = current.next
@@ -24,3 +27,16 @@ if __name__ == "__main__":
     print linkedList
     removeDups(linkedList)
     print linkedList
+
+    ll2 = sllist([1,2,3,4,5,5])
+    print ll2
+    removeDups(ll2)
+    print ll2
+
+    ll3 = sllist([])
+    removeDups(ll3)
+
+    ll4 = sllist([1,1,1,2,3,3])
+    print ll4
+    removeDups(ll4)
+    print ll4
