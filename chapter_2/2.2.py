@@ -29,3 +29,5 @@ if __name__ == "__main__":
     returnKth(ll2, 5)
     returnKth(ll2, 6)
     returnKth(ll2, 0)
+
+""" for time complexity O(n) and O(1) for space $python 2.2.py to run the code with tests"""
