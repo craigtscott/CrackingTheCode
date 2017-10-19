@@ -41,16 +41,8 @@ class linkedList(object):
         thisNode = self.root
         while thisNode:
             if thisNode.getData() == d:
-                return d
+                return thisNode
             else:
                 thisNode = thisNode.getNext()
-        return Node                
+        return None                
 
-ll1 = linkedList()
-ll1.add(3)
-ll1.add(5)
-ll1.add(7)
-ll1.remove(5)
-print(ll1.remove(7))
-print(ll1.find(5))
-print(ll1.find(3))
