@@ -7,27 +7,17 @@ class ThreeStacks(object):
         self.values = [None] * stackSize * 3
         self.stackSize = stackSize
 
-        self.stack0Bottom = 0
-        self.stack0Top = self.stack0Bottom + self.stackSize
-
-        self.stack1Bottom = self.stack0Top
-        self.stack1Top = self.stack1Bottom + self.stackSize
-
-        self.stack2Bottom = self.stack1Top
-        self.stack2Top = self.stack2Bottom + self.stackSize
-
-        self.stackIdx = [0, self.stackSize, self.stackSize * 2]
+        self.indexHash = {0: [0, self.stackSize], 1: [self.stackSize, self.stackSize * 2], 2: [self.stackSize * 2, self.stackSize * 3]}
 
     def push(self, stackNum, value):
-        if False:#isFull(stackNum):
+        print self.indexHash
+        if self.indexHash[stackNum][0] == self.indexHash[stackNum][1]:
             print "FULL"
             return False
         else:
-            self.values[self.stackIdx[stackNum]] = value
-            self.stackIdx[stackNum] =  self.stackIdx[stackNum] + 1
+            self.values[self.indexHash[stackNum][0]] = value
+            self.indexHash[stackNum] = [self.indexHash[stackNum][0] + 1, self.indexHash[stackNum][1]]
             return True
-    #def isFull(n):
-     #   return False
 
     def printStacks(self):
         print self.values
@@ -36,6 +26,7 @@ class ThreeStacks(object):
 
 multi = ThreeStacks(3)
 multi.push(0,1)
-multi.push(1,2)
-multi.push(2,3)
+multi.push(0,2)
+multi.push(0,3)
+multi.push(0,4)
 multi.printStacks()
