@@ -12,11 +12,13 @@ class Node(object):
         self.Data = d
 
 class linkedList(object):
-    def __init__(self, r = Node):
+    def __init__(self, r = None):
         self.root = r
         self.size = 0
     def getSize(self):
         return self.size
+    def getRoot(self):
+        return self.root
     def add(self, d):
         new_node = Node(d, self.root)
         self.root = new_node
