@@ -30,12 +30,17 @@ class ThreeStacks(object):
     def printStacks(self):
         print self.values
         return True
-
+        
+    def getTop(self, stackNum):
+        idx = self.indexHash[stackNum][0]
+        print self.values[idx]
+        return self.values[idx]
 
 multi = ThreeStacks(3)
 multi.push(0,1)
 multi.push(0,2)
 multi.push(0,3)
+multi.getTop(0)
 multi.pop(0)
 multi.push(1,4)
 multi.printStacks()

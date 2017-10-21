@@ -6,27 +6,18 @@ from linkedList import Node, linkedList
 
 def removeDups(linkedList):
     
-    if (linkedList.getRoot() is None):
-        return
-
-    seenHash = {}
-    current = linkedList.getRoot()
-#    touched = set([current.value])
+    current = linkedList
     while current != None:
         runner = current
         while runner.getNext() != None:
-            print runner.getData()
-            print runner.getNext().getData()
-            print current.getData()
             if runner.getNext().getData() == current.getData():
+                print runner.getNext().getData()
                 runner.setNext(runner.getNext().getNext())
+                print runner.getNext().getData()
             else:
-                current = current.getNext()
-            #current.setNext(current.getNext())
-            #linkedList.remove(current) 
-        #else:
-            #seenHash[current.getData()] = True
-            #current = current.getNext()
+                runner.setNext(runner.getNext())
+        
+        current.setNext(current.getNext())
 
     return linkedList
 
@@ -42,6 +33,6 @@ if __name__ == "__main__":
     ll1.add(4)
     ll1.add(6)
     ll1.add(7)
-    print "remoxe##############"
-    removeDups(ll1)
-
+    print ll1.getSize()
+    removeDups(ll1.getRoot())
+    print ll1.getSize()
