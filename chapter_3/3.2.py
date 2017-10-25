@@ -2,7 +2,6 @@
 
 """Stack Min: How would you design a stack which, in addition to push a pop, has a function min which returns the  minimum element? Push, pop and min should all operate in O(1) time. """
 
-from ThreeStacks import ThreeStacks
 class StackWithMin(object):
     def __init__(self):
         self.minimum = None
@@ -19,8 +18,27 @@ class StackWithMin(object):
         print  self.minimum
         print self.values
 
+    def getMin(self):
+        min = self.values[0]
+        for i in range (1,10):
+            if self.values[i] == None:
+                return min
+            if self.values[i] < min :
+               min = self.values[i]
+        return min
 
-
+    def pop(self):
+        if self.index > 0:
+            self.index = self.index - 1
+            popped = self.values[self.index]
+            self.values[self.index] = None
+        if popped == self.minimum:
+            self.minimum = self.getMin()
+        print self.minimum
+        print self.values
 min = StackWithMin()
 min.push(5)
 min.push(4)
+min.push(3)
+min.pop()
+min.pop()
