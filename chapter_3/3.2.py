@@ -42,3 +42,7 @@ min.push(4)
 min.push(3)
 min.pop()
 min.pop()
+
+""" to run $ pyhton 3.2.py
+
+the push is O(1) pop is O(n) but needs revision"""
